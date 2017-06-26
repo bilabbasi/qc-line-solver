@@ -1,30 +1,38 @@
-%% Description - QCE along lines
-% Performs the one-dimensional line solver along the vector (kc,kr).
 %% Function
-function [QCE, Nit] = QuasiConvex2D(U,kr,kc,e)
-
-n = size(U,1);
+function QCE = QuasiConvex2D(g,kr,kc,e)
+%% Description - (kr,kc)-QCE
+%------------------------------------------------------------------------%
+%     Returns the quasiconvex envelope of g. It is assumed that the
+%     computational domain is a uniform partition (with spatial resolution
+%     h) of the box [-1,1]^2.
+% 
+%     Parameters
+%     ----------
+%     g       : Obstacle
+%     (kr,kc) : Line along which quasiconvex envelope will be computed
+%     e       : e used to generate robustly quasiconvex envelopes (e>0)
+%
+%     Returns
+%     -------
+%     QCE : (e-Robustly) (kr,kc)-Quasiconvex envelope along 
+%------------------------------------------------------------------------%
+n = size(g,1);
 h = 2/(n-1); %assuming computational domain is [-1,1]^2
-%kr = height of vector
-%kc = length of vector
 kc = kc + 1; %add 1 to sync with index in matlab
 kr = kr + 1;
-U1 = U;
-U2 = rot90(U,2);
-Nit = 0;
+U1 = g;
+U2 = rot90(g,2);
 if (kr-1) ~= 0
     j = kc : n;
     for i = kr : n
         U1(i,j) = min(U1(i,j),U1(i-(kr-1),j-(kc-1)) - e*h);
         U2(i,j) = min(U2(i,j),U2(i-(kr-1),j-(kc-1)) - e*h);
-        Nit = Nit+1;
     end
 else
     i = kr : n;
     for j = kc : n
         U1(i,j) = min(U1(i,j),U1(i-(kr-1),j-(kc-1)) - e*h);
         U2(i,j) = min(U2(i,j),U2(i-(kr-1),j-(kc-1)) - e*h);
-        Nit = Nit+1;
     end
 end
 U2 = rot90(U2,-2);
