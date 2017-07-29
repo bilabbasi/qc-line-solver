@@ -2,7 +2,7 @@
 
 $F[u]$
 
-### Getting Started
+# Getting Started
 
 There are two folders: matlab and python. Each folder has (analogously) written code in each language. The 
 
