@@ -4,15 +4,15 @@ $F[u]$
 
 ## Getting Started
 
-There are two folders: matlab and python. Each folder has (analogously) written code in each language. The 
+There are two folders: matlab and python. Each folder has (analogously) written code in each language.
 
 ### Python
 
-All of the needed functions are contained in the linesolver.py 
+All of the needed functions are contained in the *linesolver.py*.
 
 ### Matlab
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Use *ndim_linesolver* to generate convex hulls of a given obstacle *g*.
 
 ## Running the tests
 
