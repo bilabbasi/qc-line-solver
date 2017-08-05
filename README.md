@@ -12,7 +12,7 @@ All of the needed functions are contained in the *linesolver.py*.
 
 ### Matlab
 
-Use *ndim_linesolver* to generate convex hulls of a given obstacle *g*.
+Use *ndim_linesolver.m* to generate convex hulls of a given obstacle *g*.
 
 ## Running the tests
 
@@ -25,4 +25,3 @@ Explain how to run the automated tests for this system
 * **Adam Oberman** - [Personal Website](http://www.adamoberman.net/)
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
