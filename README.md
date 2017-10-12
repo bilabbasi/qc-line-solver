@@ -1,5 +1,6 @@
 # Level set convex hulls using a line-solver  
 
+The ideas behind the code are from the notion that quasiconvexity of a function, over a (convex) domain, is equivalent to quasiconvexity along lines partioning that domain.
 
 ## Getting Started
 
