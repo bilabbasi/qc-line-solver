@@ -7,7 +7,7 @@ There are two folders: matlab and python. Each folder has (analogously) written 
 
 ### Python
 
-All of the needed functions are contained in the *linesolver.py*.
+All of the needed functions are contained in the *linesolver.py*. In particular, use *quasiconvex_rotate* to compute the quasiconvex envelope along a given slope (including it's rotation).
 
 ### Matlab
 
