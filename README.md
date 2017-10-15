@@ -27,11 +27,8 @@ Examples
 [Computing the level set convex hull](https://link.springer.com/epdf/10.1007/s10915-017-0522-8?author_access_token=JnmJ60gsLcGVYBUk5YOHQfe4RwlQNchNByi7wbcMAY4q8AK9yRT_34Luo0ewQQvaIbok4C6M-tOz6nND-LBp0wwaj-w0BFOm8Tkquc1IdL1NsVIMJXgfJjyeoRDaaQfjlJksXJIMT6E4ssVfKHeJuQ\%3D\%3D)
 
 If you use the paper in your work, please use the following citation:
-> @article{abbasi2017qcline, 
-        > >author="Abbasi, Bilal and Oberman, Adam M.", 
-        
-        > >title="Computing the Level Set Convex Hull", 
-        
-        > >journal="Journal of Scientific Computing", 
-        
-        > >year="2017", issn="1573-7691"}
+        @article{abbasi2017qcline, 
+        author="Abbasi, Bilal and Oberman, Adam M.", 
+        title="Computing the Level Set Convex Hull", 
+        journal="Journal of Scientific Computing", 
+        year="2017", issn="1573-7691"}
