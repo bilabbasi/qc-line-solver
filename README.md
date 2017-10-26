@@ -14,9 +14,10 @@ All of the needed functions are contained in the *linesolver.py*. In particular,
 
 Use *ndim_linesolver.m* to generate convex hulls of a given obstacle *g*.
 
-## Examples
+### Examples
 
-Examples
+An example for using the code is given by *example-cones.py/m*. The solvers are applied to an obstacle comprising the minimum of two cones.
+
 ## Authors
 
 * **Bilal Abbasi** - [LinkedIn](https://www.linkedin.com/in/bilal-abbasi-51948655/)
