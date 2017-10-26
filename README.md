@@ -1,87 +1,35 @@
-# Project Title
+# Level set convex hulls using a line-solver  
 
-One Paragraph of project description goes here
+The ideas behind the code are from the notion that quasiconvexity of a function, over a (convex) domain, is equivalent to quasiconvexity along lines partioning that domain.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+There are two folders: matlab and python. Each folder has (analogously) written code in each language.
 
-### Prerequisites
+### Python
 
-What things you need to install the software and how to install them
+All of the needed functions are contained in the *linesolver.py*. In particular, use *quasiconvex_rotate* to compute the quasiconvex envelope along a given slope (including it's rotation).
 
-```
-Give examples
-```
+### Matlab
 
-### Installing
+Use *ndim_linesolver.m* to generate convex hulls of a given obstacle *g*.
 
-A step by step series of examples that tell you have to get a development env running
+## Examples
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
+Examples
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Bilal Abbasi** - [LinkedIn](https://www.linkedin.com/in/bilal-abbasi-51948655/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Adam Oberman** - [Personal Website](http://www.adamoberman.net/)
 
-## License
+## References
+[Computing the level set convex hull](https://link.springer.com/epdf/10.1007/s10915-017-0522-8?author_access_token=JnmJ60gsLcGVYBUk5YOHQfe4RwlQNchNByi7wbcMAY4q8AK9yRT_34Luo0ewQQvaIbok4C6M-tOz6nND-LBp0wwaj-w0BFOm8Tkquc1IdL1NsVIMJXgfJjyeoRDaaQfjlJksXJIMT6E4ssVfKHeJuQ\%3D\%3D)
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+If you use the paper in your work, please use the following citation:
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+> article{abbasi2017qcline, 
+> author="Abbasi, Bilal and Oberman, Adam M.",
+> title="Computing the Level Set Convex Hull", 
+> journal="Journal of Scientific Computing", 
+> year="2017", issn="1573-7691"}
