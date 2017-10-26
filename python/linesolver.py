@@ -8,7 +8,8 @@ import numpy as np
     partitioning the computational domain.
 
     The code is based on the algorithms discussed in the following:
-        https://arxiv.org/abs/1612.05584
+
+                    https://arxiv.org/abs/1612.05584
 
     Parameters
     ----------
@@ -30,7 +31,8 @@ import numpy as np
 
 # Default stencil to use (canonical basis vectors)
 stencil = np.array([[0,1],
-                    [1,0]])
+                    [1,0],
+                    [1,1]])
 
 def convex_linesolver1D(U):
     #Computes the convex envelope along a 1D line.
