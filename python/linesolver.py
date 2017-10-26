@@ -7,6 +7,9 @@ import numpy as np
     line solvers along lines (with slope given by the stencil) 
     partitioning the computational domain.
 
+    The code is based on the algorithms discussed in the following:
+        https://arxiv.org/abs/1612.05584
+
     Parameters
     ----------
     U : array_like
@@ -24,10 +27,10 @@ import numpy as np
     i : scalar
         Number of iterations taken.
 """
+
+# Default stencil to use (canonical basis vectors)
 stencil = np.array([[0,1],
-                    [1,0],
-                    [1,2],
-                    [2,1]])
+                    [1,0]])
 
 def convex_linesolver1D(U):
     #Computes the convex envelope along a 1D line.
@@ -69,7 +72,7 @@ def convex_linesolver_line(Nx,Ny,U,v,i=0,j=0):
 
     return U_ce
 
-def convex_linesolver(U,stencil=np.array([[0,1],[1,0]]),sweep_bdry='yes'):
+def convex_linesolver(U,stencil=stencil,sweep_bdry='yes'):
     #Computes the convex envelope by iterating the 1D linesolver along the lines with direction v.
     #Solution propagates from the left and bottom boundaries.
     #Note that the CE line solver is applied along the boundaries as well. This means
