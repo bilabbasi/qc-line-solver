@@ -2,6 +2,8 @@ import numpy as np
 import obstacles as obs
 import linesolver as ls
 import fig_generator as fig
+## Example for the linesolver applied to the minimum of two cones.
+
 # Set up computational domain
 N = 100
 x = np.linspace(-1,1,N)
