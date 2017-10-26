@@ -24,6 +24,10 @@ import numpy as np
     i : scalar
         Number of iterations taken.
 """
+stencil = np.array([[0,1],
+                    [1,0],
+                    [1,2],
+                    [2,1]])
 
 def convex_linesolver1D(U):
     #Computes the convex envelope along a 1D line.
@@ -141,7 +145,7 @@ def quasiconvex_march(U,dx,eps,v=np.array([1,0]),sweep_bdry='yes'):
     U_qce = np.maximum(Uf,Ub) #Take maximum to get QC envelope along lines
     return U_qce
 
-def quasiconvex_rotate(U,dx,eps,stencil,sweep_bdry='yes'):
+def quasiconvex_rotate(U,dx,eps,stencil=stencil,sweep_bdry='yes'):
     Ur = np.copy(U)
     for v in stencil:
         Ur = quasiconvex_march(Ur,dx,eps,v = v,sweep_bdry=sweep_bdry)

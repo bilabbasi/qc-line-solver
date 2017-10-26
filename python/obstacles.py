@@ -1,6 +1,5 @@
 import numpy as np
-import context
-from utils import plot_utils
+# import context
 
 def cones(x,y,vshift = 0,rot = 0,peaks = np.array([[-0.5,0],[0.5,0]])):
 	"""
